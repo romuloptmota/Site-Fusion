@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fusion',
-        'USER': 'romuloptmota',
+        'USER': 'postgres',
         'PASSWORD': '5662401rP',
         'HOST': 'localhost',
         'PORT': '5432'
