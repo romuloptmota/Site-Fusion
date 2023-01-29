@@ -9,6 +9,7 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
 
-        context['servicos'] = Servico.objects.all()
-        context['funcionarios'] = Funcionario.objects.all()
+        # context['servicos'] = Servico.objects.all()
+        context['servicos'] = Servico.objects.order_by('?').all  # ordenalar aleatorio
+        context['funcionarios'] = Funcionario.objects.order_by('?').all
         return context
