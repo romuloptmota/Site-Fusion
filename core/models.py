@@ -43,3 +43,19 @@ class Cargo(Base):
     def __str__(self):
         return self.cargo
 
+
+class Funcionario(Base):
+    nome = models.CharField('Nome', max_length=100)
+    cargo = models.ForeignKey('core.Cargo', verbose_name='Cargo', on_delete=models.CASCADE)
+    bio = models.TextField('Bio', max_length=100)
+    imagem = StdImageField('Imagem', upload_to='equipe', validators={'thump': {'width': 480, 'height': 480, 'crop': True}})
+    facebook = models.CharField('Facebook', max_length=100, default='#')  # '#' para link da rede social
+    twitter = models.CharField('Twitter', max_length=100, default='#')
+    instagram = models.CharField('Instagram', max_length=100, default='#')
+
+    class Meta:
+        verbose_name = 'Funcionàrio'
+        verbose_name_plural = 'Funcionàrios'
+
+    def __str__(self):
+        return self.nome
