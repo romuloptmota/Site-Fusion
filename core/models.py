@@ -76,6 +76,6 @@ class Recursos(Base):
         ('lni-leaf', 'Folha'),
         ('lni-layers', 'MultiPaginas'),
     )
-    descricao = models.CharField('Serviço', max_length=100)
-    tecnologia = models.TextField('Descrição', max_length=200)
+    tecnologia = models.CharField('tecnologia', max_length=100)
+    descricao = models.TextField('Descrição', max_length=200)
     icone = models.CharField('Icone', max_length=16, choices=ICONE_CHOICES)
