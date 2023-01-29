@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 
-from.models import Servico, Funcionario
+from.models import Servico, Funcionario, Recursos
 
 
 class IndexView(TemplateView):
@@ -12,4 +12,5 @@ class IndexView(TemplateView):
         # context['servicos'] = Servico.objects.all()
         context['servicos'] = Servico.objects.order_by('?').all  # ordenalar aleatorio
         context['funcionarios'] = Funcionario.objects.order_by('?').all
+        context['recursos'] = Recursos.objects.order_by('?').all
         return context
