@@ -48,7 +48,7 @@ class Funcionario(Base):
     nome = models.CharField('Nome', max_length=100)
     cargo = models.ForeignKey('core.Cargo', verbose_name='Cargo', on_delete=models.CASCADE)
     bio = models.TextField('Bio', max_length=100)
-    imagem = StdImageField('Imagem', upload_to='equipe', validators={'thump': {'width': 480, 'height': 480, 'crop': True}})
+    imagem = StdImageField('Imagem', upload_to='equipe', variations={'thump': {'width': 480, 'height': 480, 'crop': True}})
     facebook = models.CharField('Facebook', max_length=100, default='#')  # '#' para link da rede social
     twitter = models.CharField('Twitter', max_length=100, default='#')
     instagram = models.CharField('Instagram', max_length=100, default='#')
