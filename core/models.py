@@ -68,14 +68,23 @@ class Funcionario(Base):
         return self.nome
 
 
-class Recursos(Base):
+class RecursosEsquerdo(Base):
     ICONE_CHOICES = (
         ('lni-rocket', 'Foguete'),
         ('lni-laptop-phone', 'NotebookLaptop'),
         ('lni-cog', 'Engrenagem'),
+    )
+    tecnologia = models.CharField('tecnologia', max_length=100)
+    descricao = models.TextField('Descrição', max_length=200)
+    icone = models.CharField('Icone', max_length=16, choices=ICONE_CHOICES)
+
+
+class RecursosDireito(Base):
+    ICONE_CHOICES = (
         ('lni-leaf', 'Folha'),
         ('lni-layers', 'MultiPaginas'),
     )
     tecnologia = models.CharField('tecnologia', max_length=100)
     descricao = models.TextField('Descrição', max_length=200)
     icone = models.CharField('Icone', max_length=16, choices=ICONE_CHOICES)
+
