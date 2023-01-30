@@ -1,1 +1,1 @@
-web: gunicorn fusion.wsgi --log-file -git s
+web: gunicorn fusion.wsgi --log-file -
