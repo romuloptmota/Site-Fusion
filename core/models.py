@@ -89,13 +89,14 @@ class RecursosDireito(Base):
     icone = models.CharField('Icone', max_length=16, choices=ICONE_CHOICES)
 
 
-class Preco(Base):
+class Precos(Base):
     ICONE_CHOICES = (
         ('lni-package', 'Caixa'),
         ('lni-drop', 'Gota'),
         ('lni-star', 'Estrela'),
     )
     preco = models.CharField('Preco', max_length=10)
+    plano = models.CharField('PLano', max_length=100)
     qts_usuarios = models.CharField('Quantidade de Usuarios', max_length=100)
     capacidade = models.CharField('Capacidade', max_length=100)
     email_suporte = models.CharField('Email Suporte', max_length=100)
