@@ -19,5 +19,5 @@
 - Aplicação de arquivos estaticos
 - Publicação do projeto
 
-### Projeto Publicado
+### Projeto Publicado - Desativado
 https://fusion-rptm.herokuapp.com/
